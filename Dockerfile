@@ -1,4 +1,4 @@
-FROM apache2
+FROM ubuntu
 
 WORKDIR /code
 
