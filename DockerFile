@@ -1,7 +1,0 @@
-FROM ubuntu
-
-WORKDIR /code
-
-COPY ab.sh /code/ab.sh
-
-CMD ["ab.sh"]
