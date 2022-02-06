@@ -1,8 +1,6 @@
-FROM ubuntu
-
+FROM ubuntu:latest
 
 WORKDIR /code
-
 
 COPY ab.sh /code/ab.sh
 
@@ -12,4 +10,7 @@ RUN dpkg-reconfigure tzdata
 RUN echo "America/Sao_Paulo" > /etc/timezone
 RUN apt-get -y install apache2
 
-CMD ["ab.sh"]
+RUN chmod 777 /code/ab.sh
+
+
+CMD ["/code/ab.sh"]
