@@ -11,5 +11,6 @@ RUN apt-get -y install tzdata
 RUN dpkg-reconfigure tzdata
 RUN echo "America/Sao_Paulo" > /etc/timezone
 RUN apt-get -y install apache2
+RUN chmod 777 /code/ab.sh
 
-CMD ["ab.sh"]
+CMD ["/code/ab.sh"]
