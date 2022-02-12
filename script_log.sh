@@ -5,7 +5,7 @@ totalRam=$(cat /proc/meminfo | grep MemTotal | awk '{print $2/1048576" GB"}' | t
 MemTotal=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
 while :
 do
-    sleep 5
+    sleep 1
     
 
     # - Qtde. total de RAM livre.
